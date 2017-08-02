@@ -28,3 +28,5 @@ build/
 out/
 .gradle/
 
+gradle-demo.iml
+

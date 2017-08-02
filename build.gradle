@@ -2,9 +2,11 @@ group 'com.cisco'
 version '1.0-SNAPSHOT'
 
 buildscript {
+
     repositories {
         mavenCentral()
     }
+
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.5.RELEASE")
     }
@@ -17,12 +19,14 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'maven'
 
 jar {
-    baseName = 'spring-gradle-demo'
+    baseName = 'gradle-demo'
     version = '1.0.0'
 }
 
 repositories {
+
     mavenCentral()
+
     jcenter()
     /* jcenter {
          name 'Binary Jcenter'
@@ -50,6 +54,16 @@ task repoInfo {
         }
     }
 }
+
+/*
+task artiInfo{
+
+    doLast{
+        configurations.runtime.each{ println it}
+    }
+
+}
+*/
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
